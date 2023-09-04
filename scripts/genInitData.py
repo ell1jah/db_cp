@@ -31,7 +31,7 @@ def generateUser():
         else:
             firstName = myFaker.first_name_male()
 
-        line = "{};{};{};{};{};{}\n".format(i + 1, myFaker.user_name(), myFaker.password(), firstName, curSex, choice(role))
+        line = "{};{};{};{};{};{}\n".format(i + 1, myFaker.unique.user_name(), myFaker.password(), firstName, curSex, choice(role))
 
         file.write(line)
 
