@@ -11,3 +11,6 @@ buildPostgres:
 
 fillPostgres:
 	docker exec -it $(shell docker container ls --latest --quiet) psql -U postgres -d clothshop -f "mnt/copy.sql"
+
+run:
+	go run cmd/main.go 

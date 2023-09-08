@@ -1,59 +1,49 @@
 package repo
 
 import (
-	"sync"
-
+	"github.com/ell1jah/db_cp/internal/models"
+	"github.com/ell1jah/db_cp/pkg/logger"
+	"github.com/jmoiron/sqlx"
 	"github.com/pkg/errors"
 )
 
-type UserRepo struct {
-	users []common.User
-	mu    sync.RWMutex
+type PgUserRepo struct {
+	Logger logger.Logger
+	DB     *sqlx.DB
 }
 
-func NewUserRepo() *UserRepo {
-	return &UserRepo{
-		mu:    sync.RWMutex{},
-		users: []common.User{},
+func (pur *PgUserRepo) Create(user models.User) (int, error) {
+	var id int
+
+	err := pur.DB.QueryRow(
+		"insert into webUser (user_id, user_login, user_password, user_name, user_sex, user_role) "+
+			"values ((select max(user_id) from webUser) + 1, $1, $2, $3, $4, $5) "+
+			"returning user_id",
+		user.Login,
+		user.Password,
+		user.Name,
+		user.Sex,
+		user.Role,
+	).Scan(&id)
+	if err != nil {
+		return 0, errors.Wrap(err, "can`t insert to db")
 	}
+
+	return id, nil
 }
 
-func (ur *UserRepo) Add(user common.UserFullData) error {
-	ur.mu.Lock()
-	defer ur.mu.Unlock()
+func (pur *PgUserRepo) GetByLoginAndPassword(login, password string) (models.User, error) {
+	user := models.User{}
 
-	userStruct := common.User{
-		Username: user.GetUsername(),
-		Password: user.GetPassword(),
-		ID:       user.GetID(),
+	err := pur.DB.Get(
+		&user,
+		"select * "+
+			"from webUser "+
+			"where user_login = $1 and user_password = $2",
+		login, password)
+	if err != nil {
+		return user, errors.Wrap(err, "can`t get from db")
 	}
 
-	ur.users = append(ur.users, userStruct)
-	return nil
-}
-
-func (ur *UserRepo) IsExistByUsername(username string) (bool, error) {
-	ur.mu.RLock()
-	defer ur.mu.RUnlock()
-
-	for _, user := range ur.users {
-		if user.Username == username {
-			return true, nil
-		}
-	}
-
-	return false, nil
-}
-
-func (ur *UserRepo) GetByRegForm(desired common.UserRegForm) (common.UserFullData, error) {
-	ur.mu.RLock()
-	defer ur.mu.RUnlock()
-
-	for _, user := range ur.users {
-		if user.Username == desired.GetUsername() && user.Password == desired.GetPassword() {
-			return user, nil
-		}
-	}
-
-	return nil, errors.Errorf("user not found")
+	return user, nil
 }

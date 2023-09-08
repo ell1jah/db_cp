@@ -2,6 +2,7 @@ package service
 
 import (
 	"github.com/ell1jah/db_cp/internal/models"
+	"github.com/ell1jah/db_cp/pkg/logger"
 	"github.com/pkg/errors"
 )
 
@@ -12,7 +13,7 @@ type UserRepo interface {
 
 type UserService struct {
 	UserRepo UserRepo
-	IDGen    func() string
+	Logger   logger.Logger
 }
 
 func (us UserService) CreateUser(user models.User) (int, error) {
