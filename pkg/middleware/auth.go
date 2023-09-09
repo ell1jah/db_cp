@@ -17,17 +17,17 @@ type AuthContextManager interface {
 	ContextWithUserID(context.Context, int) context.Context
 }
 
-type AuthHandler struct {
+type AuthManager struct {
 	SessionManager AuthSessionsManager
 	Logger         logger.Logger
 	ContextManager AuthContextManager
 }
 
-func (au *AuthHandler) Auth(next http.Handler, roles ...string) http.Handler {
+func (am *AuthManager) Auth(next http.Handler, roles ...string) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		token := r.Header.Get(sessionHeader)
 		if token == "" {
-			au.Logger.Infow("authoriztion",
+			am.Logger.Infow("authoriztion",
 				"url", r.URL.Path,
 				"method", r.Method,
 				"remote_addr", r.RemoteAddr,
@@ -37,9 +37,9 @@ func (au *AuthHandler) Auth(next http.Handler, roles ...string) http.Handler {
 			return
 		}
 
-		userID, userRole, err := au.SessionManager.GetUser(token)
+		userID, userRole, err := am.SessionManager.GetUser(token)
 		if err != nil {
-			au.Logger.Infow("authoriztion",
+			am.Logger.Infow("authoriztion",
 				"url", r.URL.Path,
 				"method", r.Method,
 				"remote_addr", r.RemoteAddr,
@@ -59,7 +59,7 @@ func (au *AuthHandler) Auth(next http.Handler, roles ...string) http.Handler {
 				}
 			}
 			if !roleMatch {
-				au.Logger.Infow("authoriztion",
+				am.Logger.Infow("authoriztion",
 					"url", r.URL.Path,
 					"method", r.Method,
 					"remote_addr", r.RemoteAddr,
@@ -71,7 +71,7 @@ func (au *AuthHandler) Auth(next http.Handler, roles ...string) http.Handler {
 			}
 		}
 
-		au.Logger.Infow("authoriztion",
+		am.Logger.Infow("authoriztion",
 			"url", r.URL.Path,
 			"method", r.Method,
 			"remote_addr", r.RemoteAddr,
@@ -79,7 +79,7 @@ func (au *AuthHandler) Auth(next http.Handler, roles ...string) http.Handler {
 			"userID", userID,
 			"userRole", userRole)
 
-		ctx := au.ContextManager.ContextWithUserID(r.Context(), userID)
+		ctx := am.ContextManager.ContextWithUserID(r.Context(), userID)
 		next.ServeHTTP(w, r.WithContext(ctx))
 	})
 }
