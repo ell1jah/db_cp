@@ -2,7 +2,7 @@ package delivery
 
 import (
 	"encoding/json"
-	"io/ioutil"
+	"io"
 	"net/http"
 
 	"github.com/ell1jah/db_cp/internal/models"
@@ -38,7 +38,7 @@ type UserHandler struct {
 func (uh *UserHandler) Register(w http.ResponseWriter, r *http.Request) {
 	user := &models.User{}
 
-	body, err := ioutil.ReadAll(r.Body)
+	body, err := io.ReadAll(r.Body)
 	r.Body.Close()
 	if err != nil {
 		uh.Logger.Errorw("can`t read body of request",
@@ -110,7 +110,7 @@ func (uh *UserHandler) Register(w http.ResponseWriter, r *http.Request) {
 func (uh *UserHandler) Login(w http.ResponseWriter, r *http.Request) {
 	regForm := &loginForm{}
 
-	body, err := ioutil.ReadAll(r.Body)
+	body, err := io.ReadAll(r.Body)
 	r.Body.Close()
 	if err != nil {
 		uh.Logger.Errorw("can`t read body of request",
