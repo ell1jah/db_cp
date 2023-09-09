@@ -18,8 +18,8 @@ type BrandService struct {
 	Logger    logger.Logger
 }
 
-func (br BrandService) Create(brand models.Brand) (int, error) {
-	id, err := br.BrandRepo.Create(brand)
+func (bs BrandService) Create(brand models.Brand) (int, error) {
+	id, err := bs.BrandRepo.Create(brand)
 	if err != nil {
 		return -1, errors.Wrap(err, "can`t add to repo")
 	}
@@ -27,8 +27,8 @@ func (br BrandService) Create(brand models.Brand) (int, error) {
 	return id, nil
 }
 
-func (br BrandService) Get(id int) (models.Brand, error) {
-	brand, err := br.BrandRepo.Get(id)
+func (bs BrandService) Get(id int) (models.Brand, error) {
+	brand, err := bs.BrandRepo.Get(id)
 	if err != nil {
 		return models.Brand{}, errors.Wrap(err, "can`t get from repo")
 	}
@@ -36,8 +36,8 @@ func (br BrandService) Get(id int) (models.Brand, error) {
 	return brand, nil
 }
 
-func (br BrandService) Update(brand models.Brand) (models.Brand, error) {
-	brand, err := br.BrandRepo.Update(brand)
+func (bs BrandService) Update(brand models.Brand) (models.Brand, error) {
+	brand, err := bs.BrandRepo.Update(brand)
 	if err != nil {
 		return brand, errors.Wrap(err, "can`t update repo")
 	}
@@ -45,8 +45,8 @@ func (br BrandService) Update(brand models.Brand) (models.Brand, error) {
 	return brand, nil
 }
 
-func (br BrandService) Delete(id int) error {
-	err := br.BrandRepo.Delete(id)
+func (bs BrandService) Delete(id int) error {
+	err := bs.BrandRepo.Delete(id)
 	if err != nil {
 		return errors.Wrap(err, "can`t delete from repo")
 	}
