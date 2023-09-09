@@ -4,9 +4,13 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/ell1jah/db_cp/internal/user/delivery"
-	"github.com/ell1jah/db_cp/internal/user/repo"
-	"github.com/ell1jah/db_cp/internal/user/service"
+	brandDel "github.com/ell1jah/db_cp/internal/brand/delivery"
+	brandRepo "github.com/ell1jah/db_cp/internal/brand/repo"
+	brandServ "github.com/ell1jah/db_cp/internal/brand/service"
+	userDel "github.com/ell1jah/db_cp/internal/user/delivery"
+	userRepo "github.com/ell1jah/db_cp/internal/user/repo"
+	userServ "github.com/ell1jah/db_cp/internal/user/service"
+	"github.com/ell1jah/db_cp/pkg/context"
 	"github.com/ell1jah/db_cp/pkg/middleware"
 	"github.com/ell1jah/db_cp/pkg/session"
 
@@ -29,11 +33,31 @@ func main() {
 	}
 	defer db.Close()
 
-	userHandler := delivery.UserHandler{
+	sessionManager := session.JWTSessionsManager{}
+	contextManager := context.ContextManager{}
+
+	authManager := middleware.AuthManager{
+		SessionManager: sessionManager,
+		Logger:         logger,
+		ContextManager: contextManager,
+	}
+
+	userHandler := userDel.UserHandler{
 		Logger:   logger,
-		Sessions: session.JWTSessionsManager{},
-		UserService: service.UserService{
-			UserRepo: &repo.PgUserRepo{
+		Sessions: sessionManager,
+		UserService: userServ.UserService{
+			UserRepo: &userRepo.PgUserRepo{
+				Logger: logger,
+				DB:     db,
+			},
+			Logger: logger,
+		},
+	}
+
+	brandHandler := brandDel.BrandHandler{
+		Logger: logger,
+		BrandService: brandServ.BrandService{
+			BrandRepo: &brandRepo.PgBrandRepo{
 				Logger: logger,
 				DB:     db,
 			},
@@ -45,6 +69,11 @@ func main() {
 
 	r.HandleFunc("/register", userHandler.Register).Methods("POST")
 	r.HandleFunc("/login", userHandler.Login).Methods("POST")
+
+	r.HandleFunc("/brand/{BRAND_ID:[0-9]+}", http.HandlerFunc(brandHandler.Get)).Methods("GET")
+	r.Handle("/brand", authManager.Auth(http.HandlerFunc(brandHandler.Create), "admin")).Methods("PUT")
+	r.Handle("/brand/{BRAND_ID:[0-9]+}", authManager.Auth(http.HandlerFunc(brandHandler.Update), "admin")).Methods("POST")
+	r.Handle("/brand/{BRAND_ID:[0-9]+}", authManager.Auth(http.HandlerFunc(brandHandler.Delete), "admin")).Methods("DELETE")
 
 	//TODO authmidddleware для других путей
 	//TODO добавление, удаление, изменение новых пользователей админом
