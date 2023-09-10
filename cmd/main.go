@@ -7,6 +7,9 @@ import (
 	brandDel "github.com/ell1jah/db_cp/internal/brand/delivery"
 	brandRepo "github.com/ell1jah/db_cp/internal/brand/repo"
 	brandServ "github.com/ell1jah/db_cp/internal/brand/service"
+	itemDel "github.com/ell1jah/db_cp/internal/item/delivery"
+	itemRepo "github.com/ell1jah/db_cp/internal/item/repo"
+	itemServ "github.com/ell1jah/db_cp/internal/item/service"
 	userDel "github.com/ell1jah/db_cp/internal/user/delivery"
 	userRepo "github.com/ell1jah/db_cp/internal/user/repo"
 	userServ "github.com/ell1jah/db_cp/internal/user/service"
@@ -65,6 +68,17 @@ func main() {
 		},
 	}
 
+	itemHandler := itemDel.ItemHandler{
+		Logger: logger,
+		ItemService: itemServ.ItemService{
+			ItemRepo: &itemRepo.PgItemRepo{
+				Logger: logger,
+				DB:     db,
+			},
+			Logger: logger,
+		},
+	}
+
 	r := mux.NewRouter()
 
 	r.HandleFunc("/register", userHandler.Register).Methods("POST")
@@ -75,8 +89,14 @@ func main() {
 	r.Handle("/brand/{BRAND_ID:[0-9]+}", authManager.Auth(http.HandlerFunc(brandHandler.Update), "admin")).Methods("POST")
 	r.Handle("/brand/{BRAND_ID:[0-9]+}", authManager.Auth(http.HandlerFunc(brandHandler.Delete), "admin")).Methods("DELETE")
 
-	//TODO authmidddleware для других путей
-	//TODO добавление, удаление, изменение новых пользователей админом
+	r.HandleFunc("/item/{ITEM_ID:[0-9]+}", http.HandlerFunc(itemHandler.Get)).Methods("GET")
+	r.Handle("/item", authManager.Auth(http.HandlerFunc(itemHandler.Create), "admin")).Methods("PUT")
+	r.Handle("/item/{ITEM_ID:[0-9]+}", authManager.Auth(http.HandlerFunc(itemHandler.Update), "admin")).Methods("POST")
+	r.Handle("/item/{ITEM_ID:[0-9]+}", authManager.Auth(http.HandlerFunc(itemHandler.Delete), "admin")).Methods("DELETE")
+	r.HandleFunc("/items}", http.HandlerFunc(itemHandler.Get)).Methods("GET")
+
+	//TODO добавление, удаление, изменение новых пользователей
+	//TODO GET /items
 
 	mux := middleware.AccessLog(logger, r)
 	mux = middleware.Panic(logger, mux)
