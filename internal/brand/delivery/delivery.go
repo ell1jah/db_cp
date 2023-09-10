@@ -44,9 +44,9 @@ func (bh *BrandHandler) Get(w http.ResponseWriter, r *http.Request) {
 
 	brand, err := bh.BrandService.Get(brandId)
 	if err != nil {
-		bh.Logger.Infow("can`t create brand",
+		bh.Logger.Infow("can`t get brand",
 			"err:", err.Error())
-		http.Error(w, "can`t create brand", http.StatusBadRequest)
+		http.Error(w, "can`t get brand", http.StatusBadRequest)
 		return
 	}
 
