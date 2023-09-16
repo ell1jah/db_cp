@@ -93,7 +93,7 @@ func main() {
 	r.Handle("/item", authManager.Auth(http.HandlerFunc(itemHandler.Create), "admin")).Methods("PUT")
 	r.Handle("/item/{ITEM_ID:[0-9]+}", authManager.Auth(http.HandlerFunc(itemHandler.Update), "admin")).Methods("POST")
 	r.Handle("/item/{ITEM_ID:[0-9]+}", authManager.Auth(http.HandlerFunc(itemHandler.Delete), "admin")).Methods("DELETE")
-	r.HandleFunc("/items}", http.HandlerFunc(itemHandler.Get)).Methods("GET")
+	r.HandleFunc("/items", http.HandlerFunc(itemHandler.GetAll)).Methods("GET")
 
 	//TODO добавление, удаление, изменение новых пользователей
 	//TODO GET /items

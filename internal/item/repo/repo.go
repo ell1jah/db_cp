@@ -56,21 +56,21 @@ func (pir *PgItemRepo) genGetAllQuery(params models.ItemsParams) string {
 	base := "select * from Item"
 	conds := []string{}
 
-	if params.Brand >= 0 {
+	if params.Brand > 0 {
 		conds = append(conds, fmt.Sprintf("brand_id = %d", params.Brand))
 	}
 	if params.Category != models.ItemsParamsAny {
-		conds = append(conds, fmt.Sprintf("category = %s", params.Category))
+		conds = append(conds, fmt.Sprintf("category = '%s'", params.Category))
 	}
 	if params.Sex != models.ItemsParamsAny {
-		conds = append(conds, fmt.Sprintf("sex = %s", params.Sex))
+		conds = append(conds, fmt.Sprintf("sex = '%s'", params.Sex))
 	}
 
 	if len(conds) != 0 {
 		base += " where"
 
 		for i := 0; i < len(conds)-1; i++ {
-			base += " " + conds[i] + ","
+			base += " " + conds[i] + "and"
 		}
 
 		base += " " + conds[len(conds)-1]
@@ -89,6 +89,7 @@ func (pir *PgItemRepo) genGetAllQuery(params models.ItemsParams) string {
 
 func (pir *PgItemRepo) GetAll(params models.ItemsParams) ([]models.Item, error) {
 	query := pir.genGetAllQuery(params)
+	pir.Logger.Debugw("PgItemRepo.GetAll()", "query", query)
 	rows, err := pir.DB.Queryx(query)
 	if err != nil {
 		return nil, errors.Wrap(err, "can`t get from db, query: "+query)
