@@ -147,7 +147,7 @@ Use case диаграмма & Диаграмма вариантов исполь
 \item Бренд. 
 Информация о брендах товаров: название, год основания, идентификатор логотипа, название компании владельца.
 \item Товар. 
-Информация о товаре: категория, цена, пол, идентификатор изображения, бренд, наличие.
+Информация о товаре: категория, размер, цена, пол, идентификатор изображения, бренд, наличие.
 \item Заказ.
 Информация о заказе: дата совершения, заказчик, цена, статус.
 \item Позиция заказа.
@@ -212,7 +212,6 @@ Use case диаграмма & Диаграмма вариантов исполь
 
 \section{Описание сущностей базы данных}
 
-В аналитической части были выделены шесть сущностей базы данных: пользователь, рейс, билет, самолет, услуга и заказ. 
 На рисунке~\ref{img:db-diagram} представлена диаграмма базы данных.
 
 \includeimage
@@ -232,25 +231,83 @@ Use case диаграмма & Диаграмма вариантов исполь
 \textbf{Имя атрибута} & \textbf{Тип атрибута} & \textbf{Описание}
 \tabularnewline
 \hline
-Id & целое & Идентификатор --- первичный ключ
+user\textunderscore id & целое & Идентификатор --- первичный ключ
 \tabularnewline
 \hline
-Role & строка & Роль пользователя
+user\textunderscore login & строка & Логин пользователя
 \tabularnewline
 \hline
-Email & строка & Адрес электронной почты
+user\textunderscore password & строка & Пароль пользователя
 \tabularnewline
 \hline
-Password & строка & Зашифрованный пароль
+user\textunderscore name & строка & Имя пользователя
 \tabularnewline
 \hline
-FirstName & строка & Имя пользователя
+user\textunderscore sex & строка & Пол пользователя
 \tabularnewline
 \hline
-LastName & строка & Фамилия пользователя
+user\textunderscore role & строка & Роль пользователя
 \tabularnewline
 \hline
-RegDate & дата и время & Дата и время регистрации
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\caption{Атрибуты таблицы <<Бренды>>}
+\label{tabular:orders}
+\begin{tabular}{|>{\raggedleft}p{4cm}|>{\raggedleft}p{3cm}|>{\raggedleft}p{8cm}|}
+\hline
+\textbf{Имя атрибута} & \textbf{Тип атрибута} & \textbf{Описание}
+\tabularnewline
+\hline
+id & целое & Идентификатор --- первичный ключ
+\tabularnewline
+\hline
+brand\textunderscore name & строка & Название бренда
+\tabularnewline
+\hline
+founding\textunderscore year & целое & Год основания
+\tabularnewline
+\hline
+logo\textunderscore id & целое & Идентификатор логотипа в стороннем сервисе
+\tabularnewline
+\hline
+brand\textunderscore owner & строка & Название владельца бренда
+\tabularnewline
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\caption{Атрибуты таблицы-связки <<Товары>>}
+\label{tabular:tickets_services}
+\begin{tabular}{|>{\raggedleft}p{4cm}|>{\raggedleft}p{3cm}|>{\raggedleft}p{8cm}|}
+\hline
+\textbf{Имя атрибута} & \textbf{Тип атрибута} & \textbf{Описание}
+\tabularnewline
+\hline
+id & целое & Идентификатор --- первичный ключ
+\tabularnewline
+\hline
+category & строка & Категория товара
+\tabularnewline
+\hline
+size & строка & Размер товара
+\tabularnewline
+\hline
+price & целое & Цена
+\tabularnewline
+\hline
+sex & строка & Пол товара
+\tabularnewline
+\hline
+image\textunderscore id & целое & Идентификатор изображения товара в стороннем сервисе
+\tabularnewline
+\hline
+brand\textunderscore id & целое & Идентификатор бренда --- внешний ключ
+\tabularnewline
+\hline
+is\textunderscore available & логический тип & Наличие
 \tabularnewline
 \hline
 \end{tabular}
@@ -258,158 +315,48 @@ RegDate & дата и время & Дата и время регистрации
 
 \begin{table}[H]
 \caption{Атрибуты таблицы <<Заказы>>}
-\label{tabular:orders}
-\begin{tabular}{|>{\raggedleft}p{4cm}|>{\raggedleft}p{3cm}|>{\raggedleft}p{8cm}|}
-\hline
-\textbf{Имя атрибута} & \textbf{Тип атрибута} & \textbf{Описание}
-\tabularnewline
-\hline
-Id & целое & Идентификатор --- первичный ключ
-\tabularnewline
-\hline
-UserId & целое & Идентификатор пользователя --- внешний ключ
-\tabularnewline
-\hline
-Status & строка & Статус заказа
-\tabularnewline
-\hline
-\end{tabular}
-\end{table}
-
-\begin{table}[H]
-\caption{Атрибуты таблицы-связки <<Билеты-Услуги>>}
-\label{tabular:tickets_services}
-\begin{tabular}{|>{\raggedleft}p{4cm}|>{\raggedleft}p{3cm}|>{\raggedleft}p{8cm}|}
-\hline
-\textbf{Имя атрибута} & \textbf{Тип атрибута} & \textbf{Описание}
-\tabularnewline
-\hline
-TicketId & целое & Идентификатор билета --- первичный и внешний ключ
-\tabularnewline
-\hline
-ServiceId & целое & Идентификатор услуги --- первичный и внешний ключ
-\tabularnewline
-\hline
-\end{tabular}
-\end{table}
-
-\begin{table}[H]
-\caption{Атрибуты таблицы <<Билеты>>}
 \label{tabular:tickets}
 \begin{tabular}{|>{\raggedleft}p{4cm}|>{\raggedleft}p{3cm}|>{\raggedleft}p{8cm}|}
 \hline
 \textbf{Имя атрибута} & \textbf{Тип атрибута} & \textbf{Описание}
 \tabularnewline
 \hline
-Id & целое & Идентификатор --- первичный ключ
+id & целое & Идентификатор --- первичный ключ
 \tabularnewline
 \hline
-FlightId & целое & Идентификатор рейса --- внешний ключ
+commit\textunderscore date & дата & Дата совершения заказа
 \tabularnewline
 \hline
-OrderId & целое & Идентификатор заказа
+user\textunderscore id & целое & Идентификатор пользователя --- внешний ключ
 \tabularnewline
 \hline
-Row & целое & Ряд в самолете
+price & целое & Суммарная цена товаров в заказе
 \tabularnewline
 \hline
-Place & символ & Место в ряду
-\tabularnewline
-\hline
-Class & строка & Класс билета
-\tabularnewline
-\hline
-Refund & логический тип & Возможен ли возврат билета
-\tabularnewline
-\hline
-Price & денежный тип & Стоимость
+current\textunderscore status & строка & Статус заказа
 \tabularnewline
 \hline
 \end{tabular}
 \end{table}
 
 \begin{table}[H]
-\caption{Атрибуты таблицы <<Рейсы>>}
+\caption{Атрибуты таблицы <<Позиции заказов>>}
 \label{tabular:flights}
 \begin{tabular}{|>{\raggedleft}p{4cm}|>{\raggedleft}p{3cm}|>{\raggedleft}p{8cm}|}
 \hline
 \textbf{Имя атрибута} & \textbf{Тип атрибута} & \textbf{Описание}
 \tabularnewline
 \hline
-Id & целое & Идентификатор --- первичный ключ
+id & целое & Идентификатор --- первичный ключ
 \tabularnewline
 \hline
-PlaneId & целое & Идентификатор самолета --- внешний ключ
+order\textunderscore id & целое & Идентификатор заказа --- внешний ключ
 \tabularnewline
 \hline
-DeparturePoint & строка & Пункт вылета
+item\textunderscore id & целое & Идентификатор товара --- внешний ключ
 \tabularnewline
 \hline
-ArrivalPoint & строка & Пункт прибытия
-\tabularnewline
-\hline
-DepartureDateTime & дата и время & Дата и время вылета
-\tabularnewline
-\hline
-ArrivalDateTime & дата и время & Дата и время прибытия
-\tabularnewline
-\hline
-\end{tabular}
-\end{table}
-
-\begin{table}[H]
-\caption{Атрибуты таблицы <<Самолеты>>}
-\label{tabular:planes}
-\begin{tabular}{|>{\raggedleft}p{4cm}|>{\raggedleft}p{3cm}|>{\raggedleft}p{8cm}|}
-\hline
-\textbf{Имя атрибута} & \textbf{Тип атрибута} & \textbf{Описание}
-\tabularnewline
-\hline
-Id & целое & Идентификатор --- первичный ключ
-\tabularnewline
-\hline
-Manufacturer & строка & Название компании-производителя
-\tabularnewline
-\hline
-Model & строка & Название модели самолета
-\tabularnewline
-\hline
-EconomyClassNum & целое & Количество мест экономкласса
-\tabularnewline
-\hline
-BusinessClassNum & целое & Количество мест бизнес-класса
-\tabularnewline
-\hline
-FirstClassNum & целое & Количество мест первого класса
-\tabularnewline
-\hline
-\end{tabular}
-\end{table}
-
-\begin{table}[H]
-\caption{Атрибуты таблицы <<Услуги>>}
-\label{tabular:services}
-\begin{tabular}{|>{\raggedleft}p{4cm}|>{\raggedleft}p{3cm}|>{\raggedleft}p{8cm}|}
-\hline
-\textbf{Имя атрибута} & \textbf{Тип атрибута} & \textbf{Описание}
-\tabularnewline
-\hline
-Id & целое & Идентификатор --- первичный ключ
-\tabularnewline
-\hline
-Name & строка & Название услуги
-\tabularnewline
-\hline
-Price & денежный тип & Стоимость услуги
-\tabularnewline
-\hline
-EconomyClass & логический тип & Доступна ли услуга для билета экономкласса
-\tabularnewline
-\hline
-BusinessClass & логический тип & Доступна ли услуга для билета бизнес-класса
-\tabularnewline
-\hline
-FirstClass & логический тип & Доступна ли услуга для билета первого класса
+amount & целое & Количество товаров
 \tabularnewline
 \hline
 \end{tabular}

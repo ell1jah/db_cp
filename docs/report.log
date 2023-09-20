@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.13)  20 SEP 2023 19:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.13)  20 SEP 2023 20:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1835,26 +1835,21 @@ Package pdftex.def Info: inc/img/use-case-03.pdf  used on input line 205.
 
 pdfTeX warning: pdflatex.exe (file ./inc/img/db-diagram.pdf): PDF inclusion: fo
 und PDF version <1.7>, but at most version <1.5> allowed
-<inc/img/db-diagram.pdf, id=295, 464.69609pt x 596.2275pt>
+<inc/img/db-diagram.pdf, id=295, 486.85887pt x 393.38968pt>
 File: inc/img/db-diagram.pdf Graphic file (type pdf)
 <use inc/img/db-diagram.pdf>
-Package pdftex.def Info: inc/img/db-diagram.pdf  used on input line 223.
-(pdftex.def)             Requested size: 450.43253pt x 577.93059pt.
+Package pdftex.def Info: inc/img/db-diagram.pdf  used on input line 222.
+(pdftex.def)             Requested size: 450.43253pt x 363.96379pt.
 [16
 
-] [17 <./inc/img/db-diagram.pdf>] [18]
-Overfull \hbox (4.47437pt too wide) in paragraph at lines 351--351
- []|\T2A/cmr/m/n/14.4 (-20) DepartureDateTime|
- []
-
-[19] [20] [21]
+ <./inc/img/db-diagram.pdf>] [17] [18] [19] [20] [21]
 
 pdfTeX warning: pdflatex.exe (file ./inc/img/function.pdf): PDF inclusion: foun
 d PDF version <1.7>, but at most version <1.5> allowed
 <inc/img/function.pdf, id=348, 395.55779pt x 682.46968pt>
 File: inc/img/function.pdf Graphic file (type pdf)
 <use inc/img/function.pdf>
-Package pdftex.def Info: inc/img/function.pdf  used on input line 477.
+Package pdftex.def Info: inc/img/function.pdf  used on input line 482.
 (pdftex.def)             Requested size: 300.29344pt x 518.13042pt.
 [22] [23 <./inc/img/function.pdf>] [24]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 3.
@@ -1862,8 +1857,8 @@ Package pdftex.def Info: inc/img/function.pdf  used on input line 477.
 
 ] [26] [27]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 584.
-Package csquotes Info: Input encoding change on input line 584.
+nput line 589.
+Package csquotes Info: Input encoding change on input line 589.
  (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
 )
@@ -1873,96 +1868,96 @@ File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
 (c:/texlive/2022/texmf-dist/tex/generic/stringenc/se-koi8-r.def
 File: se-koi8-r.def 2019/11/29 v1.12 stringenc: KOI8-R
 ) [28]
-Package csquotes Info: Input encoding change on input line 588.
+Package csquotes Info: Input encoding change on input line 593.
 
 (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
 )
-Package csquotes Info: Input encoding change on input line 591.
+Package csquotes Info: Input encoding change on input line 596.
 
 (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
 )
-Package csquotes Info: Input encoding change on input line 594.
+Package csquotes Info: Input encoding change on input line 599.
 
 (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
 ) [29]
-Package csquotes Info: Input encoding change on input line 598.
+Package csquotes Info: Input encoding change on input line 603.
 
 (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
 )
-Package csquotes Info: Input encoding change on input line 601.
+Package csquotes Info: Input encoding change on input line 606.
 
 (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
 )
-Package csquotes Info: Input encoding change on input line 609.
+Package csquotes Info: Input encoding change on input line 614.
 
 (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
 ) [30]
-Package csquotes Info: Input encoding change on input line 612.
+Package csquotes Info: Input encoding change on input line 617.
 
 (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
 )
-Package csquotes Info: Input encoding change on input line 615.
+Package csquotes Info: Input encoding change on input line 620.
 
 (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
 )
-Package csquotes Info: Input encoding change on input line 618.
+Package csquotes Info: Input encoding change on input line 623.
 
 (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
 ) [31]
-Package csquotes Info: Input encoding change on input line 621.
+Package csquotes Info: Input encoding change on input line 626.
 
 (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
 )
-Package csquotes Info: Input encoding change on input line 624.
+Package csquotes Info: Input encoding change on input line 629.
 
 (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
 )
-Package csquotes Info: Input encoding change on input line 627.
+Package csquotes Info: Input encoding change on input line 632.
 
 (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
 ) [32] [33]
-Package csquotes Info: Input encoding change on input line 636.
+Package csquotes Info: Input encoding change on input line 641.
 
 (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
 ) [34]
-Package csquotes Info: Input encoding change on input line 644.
+Package csquotes Info: Input encoding change on input line 649.
 
 (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
 ) [35]
-Package csquotes Info: Input encoding change on input line 654.
+Package csquotes Info: Input encoding change on input line 659.
 
 (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
 )
-Package csquotes Info: Input encoding change on input line 657.
+Package csquotes Info: Input encoding change on input line 662.
 
 (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
 ) [36]
-Overfull \hbox (1.15059pt too wide) in paragraph at lines 663--665
+Overfull \hbox (1.15059pt too wide) in paragraph at lines 668--670
 \T2A/cmr/m/n/14.4 (-20) <<Пользователь>>. Данный тест проверяет корректность ра
 боты метода регистрации
  []
 
-Package csquotes Info: Input encoding change on input line 667.
+Package csquotes Info: Input encoding change on input line 672.
 (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
 ) [37] [38]
-Package csquotes Info: Input encoding change on input line 673.
+Package csquotes Info: Input encoding change on input line 678.
 
 (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
@@ -1971,20 +1966,20 @@ File: koi8-r.def 2022/06/11 v1.0e Input encoding file
 [40
 
 ]
-Package csquotes Info: Input encoding change on input line 730.
+Package csquotes Info: Input encoding change on input line 735.
  (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
 ) [41]
 <inc/img/graph-01.pdf, id=756, 428.43477pt x 312.19397pt>
 File: inc/img/graph-01.pdf Graphic file (type pdf)
 <use inc/img/graph-01.pdf>
-Package pdftex.def Info: inc/img/graph-01.pdf  used on input line 799.
+Package pdftex.def Info: inc/img/graph-01.pdf  used on input line 804.
 (pdftex.def)             Requested size: 350.33727pt x 255.30043pt.
  [42]
 <inc/img/graph-02.pdf, id=765, 428.43477pt x 312.19397pt>
 File: inc/img/graph-02.pdf Graphic file (type pdf)
 <use inc/img/graph-02.pdf>
-Package pdftex.def Info: inc/img/graph-02.pdf  used on input line 806.
+Package pdftex.def Info: inc/img/graph-02.pdf  used on input line 811.
 (pdftex.def)             Requested size: 350.33727pt x 255.30043pt.
 
 [43 <./inc/img/graph-01.pdf> <./inc/img/graph-02.pdf>] [44] [45
@@ -1992,7 +1987,7 @@ Package pdftex.def Info: inc/img/graph-02.pdf  used on input line 806.
 ] [46
 
 ]
-Underfull \hbox (badness 1122) in paragraph at lines 832--832
+Underfull \hbox (badness 1122) in paragraph at lines 837--837
 []\T2A/cmr/m/it/14.4 (+20) Microsoft\T2A/cmr/m/n/14.4 (+20) . COALESCE (Transac
 t-SQL). ^^V 2023. ^^V (Да-та об-ра-ще-ния:
  []
@@ -2023,7 +2018,7 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 Here is how much of TeX's memory you used:
  50896 strings out of 475075
  1105038 string characters out of 5782995
- 2288497 words of memory out of 5000000
+ 2288503 words of memory out of 5000000
  70835 multiletter control sequences out of 15000+600000
  495294 words of font info for 161 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2039,7 +2034,7 @@ fb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb><c:/tex
 live/2022/texmf-dist/fonts/type1/public/cm-super/sfti2074.pfb><c:/texlive/2022/
 texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2022/texmf-dist
 /fonts/type1/public/cm-super/sftt1440.pfb>
-Output written on report.pdf (47 pages, 726916 bytes).
+Output written on report.pdf (47 pages, 722577 bytes).
 PDF statistics:
  1043 PDF objects out of 1200 (max. 8388607)
  866 compressed objects within 9 object streams
