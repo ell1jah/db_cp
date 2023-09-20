@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.13)  19 SEP 2023 21:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.13)  20 SEP 2023 19:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1715,7 +1715,7 @@ Package hyperref Info: Link coloring OFF on input line 9.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
 (lastpage)             ! on input line 9.
-<img/bmstu-logo.pdf, id=135, 500.95255pt x 591.38255pt>
+<img/bmstu-logo.pdf, id=131, 500.95255pt x 591.38255pt>
 File: img/bmstu-logo.pdf Graphic file (type pdf)
 <use img/bmstu-logo.pdf>
 Package pdftex.def Info: img/bmstu-logo.pdf  used on input line 19.
@@ -1793,104 +1793,77 @@ Underfull \hbox (badness 10000) in paragraph at lines 68--70
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 1.
 [8
 
-]
-<inc/img/gui-01.png, id=227, 916.1728pt x 625.58719pt>
-File: inc/img/gui-01.png Graphic file (type png)
-<use inc/img/gui-01.png>
-Package pdftex.def Info: inc/img/gui-01.png  used on input line 122.
-(pdftex.def)             Requested size: 450.43253pt x 307.57133pt.
-<inc/img/gui-02.png, id=229, 828.84656pt x 541.27219pt>
-File: inc/img/gui-02.png Graphic file (type png)
-<use inc/img/gui-02.png>
-Package pdftex.def Info: inc/img/gui-02.png  used on input line 129.
-(pdftex.def)             Requested size: 450.43253pt x 294.14919pt.
- [9 <./inc/img/gui-01.png>]
-<inc/img/gui-03.png, id=237, 1003.49907pt x 526.21594pt>
-File: inc/img/gui-03.png Graphic file (type png)
-<use inc/img/gui-03.png>
-Package pdftex.def Info: inc/img/gui-03.png  used on input line 136.
-(pdftex.def)             Requested size: 450.43253pt x 236.2008pt.
- [10 <./inc/img/gui-02.png> <./inc/img/gui-03.png>] [11] [12] [13] [14] [15] [1
-6] [17] [18] [19]
+] [9] [10] [11]
 
 pdfTeX warning: pdflatex.exe (file ./inc/img/er.pdf): PDF inclusion: found PDF 
 version <1.7>, but at most version <1.5> allowed
-<inc/img/er.pdf, id=327, 717.64107pt x 796.89719pt>
+<inc/img/er.pdf, id=230, 577.19638pt x 408.56638pt>
 File: inc/img/er.pdf Graphic file (type pdf)
 <use inc/img/er.pdf>
-Package pdftex.def Info: inc/img/er.pdf  used on input line 375.
-(pdftex.def)             Requested size: 500.484pt x 555.7571pt.
-[20 <./inc/img/er.pdf>] [21]
+Package pdftex.def Info: inc/img/er.pdf  used on input line 172.
+(pdftex.def)             Requested size: 500.484pt x 354.26537pt.
+
 
 pdfTeX warning: pdflatex.exe (file ./inc/img/use-case-01.pdf): PDF inclusion: f
 ound PDF version <1.7>, but at most version <1.5> allowed
-<inc/img/use-case-01.pdf, id=349, 372.43138pt x 221.8689pt>
+<inc/img/use-case-01.pdf, id=232, 207.65579pt x 284.98468pt>
 File: inc/img/use-case-01.pdf Graphic file (type pdf)
 <use inc/img/use-case-01.pdf>
-Package pdftex.def Info: inc/img/use-case-01.pdf  used on input line 403.
-(pdftex.def)             Requested size: 450.43253pt x 268.35385pt.
-
-
-pdfTeX warning: pdflatex.exe (file ./inc/img/use-case-04.pdf): PDF inclusion: f
-ound PDF version <1.7>, but at most version <1.5> allowed
-<inc/img/use-case-04.pdf, id=350, 502.99919pt x 321.11969pt>
-File: inc/img/use-case-04.pdf Graphic file (type pdf)
-<use inc/img/use-case-04.pdf>
-Package pdftex.def Info: inc/img/use-case-04.pdf  used on input line 410.
-(pdftex.def)             Requested size: 450.43253pt x 287.57428pt.
-[22 <./inc/img/use-case-01.pdf>]
+Package pdftex.def Info: inc/img/use-case-01.pdf  used on input line 186.
+(pdftex.def)             Requested size: 200.19054pt x 274.75627pt.
+[12 <./inc/img/er.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./inc/img/use-case-02.pdf): PDF inclusion: f
 ound PDF version <1.7>, but at most version <1.5> allowed
-<inc/img/use-case-02.pdf, id=366, 413.62529pt x 483.72719pt>
+<inc/img/use-case-02.pdf, id=249, 207.65579pt x 293.1753pt>
 File: inc/img/use-case-02.pdf Graphic file (type pdf)
 <use inc/img/use-case-02.pdf>
-Package pdftex.def Info: inc/img/use-case-02.pdf  used on input line 417.
-(pdftex.def)             Requested size: 500.484pt x 585.3486pt.
-[23 <./inc/img/use-case-04.pdf>]
+Package pdftex.def Info: inc/img/use-case-02.pdf  used on input line 196.
+(pdftex.def)             Requested size: 200.19054pt x 282.65292pt.
+[13 <./inc/img/use-case-01.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./inc/img/use-case-03.pdf): PDF inclusion: f
 ound PDF version <1.7>, but at most version <1.5> allowed
-<inc/img/use-case-03.pdf, id=381, 501.79468pt x 315.09718pt>
+<inc/img/use-case-03.pdf, id=265, 218.7372pt x 459.63718pt>
 File: inc/img/use-case-03.pdf Graphic file (type pdf)
 <use inc/img/use-case-03.pdf>
-Package pdftex.def Info: inc/img/use-case-03.pdf  used on input line 424.
-(pdftex.def)             Requested size: 500.484pt x 314.27904pt.
-[24 <./inc/img/use-case-02.pdf>] [25 <./inc/img/use-case-03.pdf>]
+Package pdftex.def Info: inc/img/use-case-03.pdf  used on input line 205.
+(pdftex.def)             Requested size: 200.19054pt x 420.66208pt.
+[14 <./inc/img/use-case-02.pdf>] [15 <./inc/img/use-case-03.pdf>]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 2.
 
 
 pdfTeX warning: pdflatex.exe (file ./inc/img/db-diagram.pdf): PDF inclusion: fo
 und PDF version <1.7>, but at most version <1.5> allowed
-<inc/img/db-diagram.pdf, id=420, 464.69609pt x 596.2275pt>
+<inc/img/db-diagram.pdf, id=295, 464.69609pt x 596.2275pt>
 File: inc/img/db-diagram.pdf Graphic file (type pdf)
 <use inc/img/db-diagram.pdf>
-Package pdftex.def Info: inc/img/db-diagram.pdf  used on input line 442.
+Package pdftex.def Info: inc/img/db-diagram.pdf  used on input line 223.
 (pdftex.def)             Requested size: 450.43253pt x 577.93059pt.
-[26
+[16
 
-] [27 <./inc/img/db-diagram.pdf>] [28]
-Overfull \hbox (4.47437pt too wide) in paragraph at lines 570--570
+] [17 <./inc/img/db-diagram.pdf>] [18]
+Overfull \hbox (4.47437pt too wide) in paragraph at lines 351--351
  []|\T2A/cmr/m/n/14.4 (-20) DepartureDateTime|
  []
 
-[29] [30] [31]
+[19] [20] [21]
 
 pdfTeX warning: pdflatex.exe (file ./inc/img/function.pdf): PDF inclusion: foun
 d PDF version <1.7>, but at most version <1.5> allowed
-<inc/img/function.pdf, id=473, 395.55779pt x 682.46968pt>
+<inc/img/function.pdf, id=348, 395.55779pt x 682.46968pt>
 File: inc/img/function.pdf Graphic file (type pdf)
 <use inc/img/function.pdf>
-Package pdftex.def Info: inc/img/function.pdf  used on input line 696.
+Package pdftex.def Info: inc/img/function.pdf  used on input line 477.
 (pdftex.def)             Requested size: 300.29344pt x 518.13042pt.
-[32] [33 <./inc/img/function.pdf>] [34]
+[22] [23 <./inc/img/function.pdf>] [24]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 3.
-[35
+[25
 
-] [36] [37]
+] [26] [27]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 803.
-Package csquotes Info: Input encoding change on input line 803.
+nput line 584.
+Package csquotes Info: Input encoding change on input line 584.
  (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
 )
@@ -1899,134 +1872,134 @@ File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
 )
 (c:/texlive/2022/texmf-dist/tex/generic/stringenc/se-koi8-r.def
 File: se-koi8-r.def 2019/11/29 v1.12 stringenc: KOI8-R
-) [38]
-Package csquotes Info: Input encoding change on input line 807.
+) [28]
+Package csquotes Info: Input encoding change on input line 588.
 
 (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
 )
-Package csquotes Info: Input encoding change on input line 810.
+Package csquotes Info: Input encoding change on input line 591.
 
 (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
 )
-Package csquotes Info: Input encoding change on input line 813.
+Package csquotes Info: Input encoding change on input line 594.
 
 (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
-) [39]
-Package csquotes Info: Input encoding change on input line 817.
-
-(c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
-File: koi8-r.def 2022/06/11 v1.0e Input encoding file
-)
-Package csquotes Info: Input encoding change on input line 820.
+) [29]
+Package csquotes Info: Input encoding change on input line 598.
 
 (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
 )
-Package csquotes Info: Input encoding change on input line 828.
-
-(c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
-File: koi8-r.def 2022/06/11 v1.0e Input encoding file
-) [40]
-Package csquotes Info: Input encoding change on input line 831.
+Package csquotes Info: Input encoding change on input line 601.
 
 (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
 )
-Package csquotes Info: Input encoding change on input line 834.
+Package csquotes Info: Input encoding change on input line 609.
+
+(c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
+File: koi8-r.def 2022/06/11 v1.0e Input encoding file
+) [30]
+Package csquotes Info: Input encoding change on input line 612.
 
 (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
 )
-Package csquotes Info: Input encoding change on input line 837.
-
-(c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
-File: koi8-r.def 2022/06/11 v1.0e Input encoding file
-) [41]
-Package csquotes Info: Input encoding change on input line 840.
+Package csquotes Info: Input encoding change on input line 615.
 
 (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
 )
-Package csquotes Info: Input encoding change on input line 843.
+Package csquotes Info: Input encoding change on input line 618.
+
+(c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
+File: koi8-r.def 2022/06/11 v1.0e Input encoding file
+) [31]
+Package csquotes Info: Input encoding change on input line 621.
 
 (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
 )
-Package csquotes Info: Input encoding change on input line 846.
-
-(c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
-File: koi8-r.def 2022/06/11 v1.0e Input encoding file
-) [42] [43]
-Package csquotes Info: Input encoding change on input line 855.
-
-(c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
-File: koi8-r.def 2022/06/11 v1.0e Input encoding file
-) [44]
-Package csquotes Info: Input encoding change on input line 863.
-
-(c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
-File: koi8-r.def 2022/06/11 v1.0e Input encoding file
-) [45]
-Package csquotes Info: Input encoding change on input line 873.
+Package csquotes Info: Input encoding change on input line 624.
 
 (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
 )
-Package csquotes Info: Input encoding change on input line 876.
+Package csquotes Info: Input encoding change on input line 627.
 
 (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
-) [46]
-Overfull \hbox (1.15059pt too wide) in paragraph at lines 882--884
+) [32] [33]
+Package csquotes Info: Input encoding change on input line 636.
+
+(c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
+File: koi8-r.def 2022/06/11 v1.0e Input encoding file
+) [34]
+Package csquotes Info: Input encoding change on input line 644.
+
+(c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
+File: koi8-r.def 2022/06/11 v1.0e Input encoding file
+) [35]
+Package csquotes Info: Input encoding change on input line 654.
+
+(c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
+File: koi8-r.def 2022/06/11 v1.0e Input encoding file
+)
+Package csquotes Info: Input encoding change on input line 657.
+
+(c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
+File: koi8-r.def 2022/06/11 v1.0e Input encoding file
+) [36]
+Overfull \hbox (1.15059pt too wide) in paragraph at lines 663--665
 \T2A/cmr/m/n/14.4 (-20) <<Пользователь>>. Данный тест проверяет корректность ра
 боты метода регистрации
  []
 
-Package csquotes Info: Input encoding change on input line 886.
+Package csquotes Info: Input encoding change on input line 667.
 (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
-) [47] [48]
-Package csquotes Info: Input encoding change on input line 892.
+) [37] [38]
+Package csquotes Info: Input encoding change on input line 673.
 
 (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
-) [49]
+) [39]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 4.
-[50
+[40
 
 ]
-Package csquotes Info: Input encoding change on input line 949.
+Package csquotes Info: Input encoding change on input line 730.
  (c:/texlive/2022/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2022/06/11 v1.0e Input encoding file
-) [51]
-<inc/img/graph-01.pdf, id=881, 428.43477pt x 312.19397pt>
+) [41]
+<inc/img/graph-01.pdf, id=756, 428.43477pt x 312.19397pt>
 File: inc/img/graph-01.pdf Graphic file (type pdf)
 <use inc/img/graph-01.pdf>
-Package pdftex.def Info: inc/img/graph-01.pdf  used on input line 1018.
+Package pdftex.def Info: inc/img/graph-01.pdf  used on input line 799.
 (pdftex.def)             Requested size: 350.33727pt x 255.30043pt.
- [52]
-<inc/img/graph-02.pdf, id=890, 428.43477pt x 312.19397pt>
+ [42]
+<inc/img/graph-02.pdf, id=765, 428.43477pt x 312.19397pt>
 File: inc/img/graph-02.pdf Graphic file (type pdf)
 <use inc/img/graph-02.pdf>
-Package pdftex.def Info: inc/img/graph-02.pdf  used on input line 1025.
+Package pdftex.def Info: inc/img/graph-02.pdf  used on input line 806.
 (pdftex.def)             Requested size: 350.33727pt x 255.30043pt.
 
-[53 <./inc/img/graph-01.pdf> <./inc/img/graph-02.pdf>] [54] [55
+[43 <./inc/img/graph-01.pdf> <./inc/img/graph-02.pdf>] [44] [45
 
-] [56
+] [46
 
 ]
-Underfull \hbox (badness 1122) in paragraph at lines 1051--1051
+Underfull \hbox (badness 1122) in paragraph at lines 832--832
 []\T2A/cmr/m/it/14.4 (+20) Microsoft\T2A/cmr/m/n/14.4 (+20) . COALESCE (Transac
 t-SQL). ^^V 2023. ^^V (Да-та об-ра-ще-ния:
  []
 
-[57] 
+[47] 
 AED: lastpage setting LastPage
-[58
+[48
 
 ] (./report.aux)
 
@@ -2037,7 +2010,7 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 3DB3D246B83121B497A12CBCD8614021;9767.
+(rerunfilecheck)             Checksum: 66845B03ACF2496A21C1D62DE687C2C3;9448.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                report
@@ -2048,11 +2021,11 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 51009 strings out of 475075
- 1107337 string characters out of 5782995
- 2289151 words of memory out of 5000000
- 70918 multiletter control sequences out of 15000+600000
- 495367 words of font info for 162 fonts, out of 8000000 for 9000
+ 50896 strings out of 475075
+ 1105038 string characters out of 5782995
+ 2288497 words of memory out of 5000000
+ 70835 multiletter control sequences out of 15000+600000
+ 495294 words of font info for 161 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  124i,19n,122p,1151b,3179s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{c:/tex
@@ -2066,10 +2039,10 @@ fb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb><c:/tex
 live/2022/texmf-dist/fonts/type1/public/cm-super/sfti2074.pfb><c:/texlive/2022/
 texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2022/texmf-dist
 /fonts/type1/public/cm-super/sftt1440.pfb>
-Output written on report.pdf (57 pages, 2209839 bytes).
+Output written on report.pdf (47 pages, 726916 bytes).
 PDF statistics:
- 1166 PDF objects out of 1200 (max. 8388607)
- 965 compressed objects within 10 object streams
- 419 named destinations out of 1000 (max. 500000)
- 42318 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 1043 PDF objects out of 1200 (max. 8388607)
+ 866 compressed objects within 9 object streams
+ 396 named destinations out of 1000 (max. 500000)
+ 42290 words of extra memory for PDF output out of 42996 (max. 10000000)
 
