@@ -1,16 +1,37 @@
-CREATE FUNCTION GetOrderPrice (@OrderId bigint)
-RETURNS money
-BEGIN
-    DECLARE @sumTickets money, @sumServices money, @result money
-    SET @sumTickets = 0;
-    SET @sumServices = 0;
-    SET @result = 0;
-    SELECT @sumTickets = COALESCE(SUM(t.Price), 0) FROM Orders o 
-    JOIN Tickets t ON o.Id = t.OrderId WHERE o.Id = @OrderId;
-    SELECT @sumServices = COALESCE(SUM(s.Price), 0) FROM Orders o 
-    JOIN Tickets t ON t.OrderId = @OrderId JOIN
-    TicketsServices ts ON t.Id = ts.TicketId 
-    JOIN Services s ON s.Id = ts.ServiceId WHERE o.Id = @OrderId;
-    SELECT @result = @sumTickets + @sumServices
-RETURN @result
-END
+CREATE 
+OR REPLACE FUNCTION ItemsInUsersBasket(webUser int) RETURNS TABLE (
+  id int,
+  category text,
+  size text,
+  price int, 
+  sex text,
+  image_id int,
+  brand_id int, 
+  is_available boolean,
+  amount int
+) AS $$ declare basket_id int;
+BEGIN 
+select 
+  o.id into basket_id 
+from 
+  Ordering o 
+where 
+  o.user_id = webUser 
+  and current_status = 'корзина';
+return query 
+SELECT 
+  i.id, 
+  i.category, 
+  i.size, 
+  i.price, 
+  i.sex, 
+  i.image_id, 
+  i.brand_id, 
+  i.is_available, 
+  o.amount 
+FROM 
+  OrderItems o 
+  JOIN Item i ON o.item_id = i.id 
+where 
+  o.order_id = basket_id;
+END $$ LANGUAGE plpgsql;
