@@ -1,0 +1,185 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{Business}{article}{}
+      \name{author}{3}{}{%
+        {{hash=65abf6808959583b7a9ec0f992fc8040}{%
+           family={Ципинова},
+           familyi={Ц\bibinitperiod},
+           given={А.\bibnamedelimi С.},
+           giveni={А\bibinitperiod\bibinitdelim С\bibinitperiod}}}%
+        {{hash=275dc0a999070efa191d5f4ec9423e73}{%
+           family={Дзусова},
+           familyi={Д\bibinitperiod},
+           given={И.\bibnamedelimi Г.},
+           giveni={И\bibinitperiod\bibinitdelim Г\bibinitperiod}}}%
+        {{hash=d2aafa7d20fe318c0a6ed5a6786c6250}{%
+           family={Волик},
+           familyi={В\bibinitperiod},
+           given={М.\bibnamedelimi В.},
+           giveni={М\bibinitperiod\bibinitdelim В\bibinitperiod}}}%
+      }
+      \strng{namehash}{57620f8f38d527c903e6ff15be93a9fb}
+      \strng{fullhash}{57620f8f38d527c903e6ff15be93a9fb}
+      \strng{bibnamehash}{57620f8f38d527c903e6ff15be93a9fb}
+      \strng{authorbibnamehash}{57620f8f38d527c903e6ff15be93a9fb}
+      \strng{authornamehash}{57620f8f38d527c903e6ff15be93a9fb}
+      \strng{authorfullhash}{57620f8f38d527c903e6ff15be93a9fb}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Гуманитарные и социально-экономические науки}
+      \field{title}{Интернет-технологии и их роль в бизнесе}
+      \field{year}{2020}
+      \field{pages}{76\bibrangedash 78}
+      \range{pages}{3}
+    \endentry
+    \entry{SQL}{article}{}
+      \name{author}{2}{}{%
+        {{hash=bbeed98c5d32729c6165255aa723fdab}{%
+           family={Жалолов},
+           familyi={Ж\bibinitperiod},
+           given={О.\bibnamedelimi И.},
+           giveni={О\bibinitperiod\bibinitdelim И\bibinitperiod}}}%
+        {{hash=3f96b62d528886c646c7fb610772efd4}{%
+           family={Усманович},
+           familyi={У\bibinitperiod},
+           given={Х.\bibnamedelimi Х.},
+           giveni={Х\bibinitperiod\bibinitdelim Х\bibinitperiod}}}%
+      }
+      \strng{namehash}{ce916c7f6927712a36692ef6840c7549}
+      \strng{fullhash}{ce916c7f6927712a36692ef6840c7549}
+      \strng{bibnamehash}{ce916c7f6927712a36692ef6840c7549}
+      \strng{authorbibnamehash}{ce916c7f6927712a36692ef6840c7549}
+      \strng{authornamehash}{ce916c7f6927712a36692ef6840c7549}
+      \strng{authorfullhash}{ce916c7f6927712a36692ef6840c7549}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Universum: технические науки}
+      \field{title}{Понятие SQL и реляционной базы данных}
+      \field{year}{2020}
+      \field{pages}{75}
+      \range{pages}{1}
+    \endentry
+    \entry{PostSQL}{article}{}
+      \name{author}{3}{}{%
+        {{hash=9b3cce15eb80b107acb3a99123965612}{%
+           family={Уткин},
+           familyi={У\bibinitperiod},
+           given={Г.\bibnamedelimi С.},
+           giveni={Г\bibinitperiod\bibinitdelim С\bibinitperiod}}}%
+        {{hash=9a4301c58c867cf14c1b2c25d1d64427}{%
+           family={Жильцов},
+           familyi={Ж\bibinitperiod},
+           given={С.\bibnamedelimi А.},
+           giveni={С\bibinitperiod\bibinitdelim А\bibinitperiod}}}%
+        {{hash=369d90cbf58a0edaee96d64b34d9b500}{%
+           family={Гананчян},
+           familyi={Г\bibinitperiod},
+           given={А.\bibnamedelimi В.},
+           giveni={А\bibinitperiod\bibinitdelim В\bibinitperiod}}}%
+      }
+      \strng{namehash}{bfa5dc3d1200a4c0df4b520b78bef852}
+      \strng{fullhash}{bfa5dc3d1200a4c0df4b520b78bef852}
+      \strng{bibnamehash}{bfa5dc3d1200a4c0df4b520b78bef852}
+      \strng{authorbibnamehash}{bfa5dc3d1200a4c0df4b520b78bef852}
+      \strng{authornamehash}{bfa5dc3d1200a4c0df4b520b78bef852}
+      \strng{authorfullhash}{bfa5dc3d1200a4c0df4b520b78bef852}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Космическая техника и технологии}
+      \field{title}{ПОСТРЕЛЯЦИОННАЯ СИСТЕМА УПРАВЛЕНИЯ БАЗОЙ ДАННЫХ НА ОСНОВЕ СЛОВАРНОЙ ТЕХНОЛОГИИ}
+      \field{year}{2022}
+      \field{pages}{39}
+      \range{pages}{1}
+    \endentry
+    \entry{Go}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={Google},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://go.dev/}}
+      \field{note}{(Дата обращения: 02.09.2023)}
+      \field{title}{Build simple, secure, scalable systems with Go}
+      \field{year}{2023}
+    \endentry
+    \entry{Postgres}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=399bd1ee587245ecac6f39beaa99886f}{%
+           family={PostgreSQL},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{399bd1ee587245ecac6f39beaa99886f}
+      \strng{fullhash}{399bd1ee587245ecac6f39beaa99886f}
+      \strng{bibnamehash}{399bd1ee587245ecac6f39beaa99886f}
+      \strng{authorbibnamehash}{399bd1ee587245ecac6f39beaa99886f}
+      \strng{authornamehash}{399bd1ee587245ecac6f39beaa99886f}
+      \strng{authorfullhash}{399bd1ee587245ecac6f39beaa99886f}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.postgresql.org/}}
+      \field{note}{(Дата обращения: 02.09.2023)}
+      \field{title}{PostgreSQL: The World's Most Advanced Open Source Relational Database}
+      \field{year}{2023}
+    \endentry
+    \entry{Locust}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=ee9c4c52006ab904c02898addbd22f91}{%
+           family={Locust},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee9c4c52006ab904c02898addbd22f91}
+      \strng{fullhash}{ee9c4c52006ab904c02898addbd22f91}
+      \strng{bibnamehash}{ee9c4c52006ab904c02898addbd22f91}
+      \strng{authorbibnamehash}{ee9c4c52006ab904c02898addbd22f91}
+      \strng{authornamehash}{ee9c4c52006ab904c02898addbd22f91}
+      \strng{authorfullhash}{ee9c4c52006ab904c02898addbd22f91}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://locust.io/}}
+      \field{note}{(Дата обращения: 03.09.2023)}
+      \field{title}{An open source load testing tool}
+      \field{year}{2023}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

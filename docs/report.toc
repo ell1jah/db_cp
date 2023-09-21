@@ -26,4 +26,5 @@
 \contentsline {section}{\numberline {4.1}Технические характеристики устройства}{31}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Время выполнения запроса}{31}{section.4.2}%
 \contentsline {chapter}{ЗАКЛЮЧЕНИЕ}{34}{chapter*.25}%
-\contentsline {chapter}{ПРИЛОЖЕНИЕ А Презентация}{35}{chapter*.26}%
+\contentsline {chapter}{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}{35}{chapter*.26}%
+\contentsline {chapter}{ПРИЛОЖЕНИЕ А Презентация}{36}{chapter*.27}%
