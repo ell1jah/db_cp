@@ -4,12 +4,18 @@ import (
 	"fmt"
 	"net/http"
 
+	basketDel "github.com/ell1jah/db_cp/internal/basket/delivery"
+	basketRepo "github.com/ell1jah/db_cp/internal/basket/repo"
+	basketServ "github.com/ell1jah/db_cp/internal/basket/service"
 	brandDel "github.com/ell1jah/db_cp/internal/brand/delivery"
 	brandRepo "github.com/ell1jah/db_cp/internal/brand/repo"
 	brandServ "github.com/ell1jah/db_cp/internal/brand/service"
 	itemDel "github.com/ell1jah/db_cp/internal/item/delivery"
 	itemRepo "github.com/ell1jah/db_cp/internal/item/repo"
 	itemServ "github.com/ell1jah/db_cp/internal/item/service"
+	orderDel "github.com/ell1jah/db_cp/internal/order/delivery"
+	orderRepo "github.com/ell1jah/db_cp/internal/order/repo"
+	orderServ "github.com/ell1jah/db_cp/internal/order/service"
 	userDel "github.com/ell1jah/db_cp/internal/user/delivery"
 	userRepo "github.com/ell1jah/db_cp/internal/user/repo"
 	userServ "github.com/ell1jah/db_cp/internal/user/service"
@@ -79,6 +85,30 @@ func main() {
 		},
 	}
 
+	basketHandler := basketDel.BasketHandler{
+		ContextManager: &contextManager,
+		Logger:         logger,
+		BasketService: basketServ.BasketService{
+			BasketRepo: &basketRepo.PgBasketRepo{
+				Logger: logger,
+				DB:     db,
+			},
+			Logger: logger,
+		},
+	}
+
+	orderHandler := orderDel.OrderHandler{
+		ContextManager: &contextManager,
+		Logger:         logger,
+		OrderService: orderServ.OrderService{
+			OrderRepo: &orderRepo.PgOrderRepo{
+				Logger: logger,
+				DB:     db,
+			},
+			Logger: logger,
+		},
+	}
+
 	r := mux.NewRouter()
 
 	r.HandleFunc("/register", userHandler.Register).Methods("POST")
@@ -95,8 +125,19 @@ func main() {
 	r.Handle("/item/{ITEM_ID:[0-9]+}", authManager.Auth(http.HandlerFunc(itemHandler.Delete), "admin")).Methods("DELETE")
 	r.HandleFunc("/items", http.HandlerFunc(itemHandler.GetAll)).Methods("GET")
 
+	r.Handle("/basket", authManager.Auth(http.HandlerFunc(basketHandler.Get), "user", "admin")).Methods("GET")
+	r.Handle("/basket", authManager.Auth(http.HandlerFunc(basketHandler.Commit), "user", "admin")).Methods("POST")
+	r.Handle("/basket/add/{ITEM_ID}", authManager.Auth(http.HandlerFunc(basketHandler.AddItem), "user", "admin")).Methods("POST")
+	r.Handle("/basket/dec/{ITEM_ID}", authManager.Auth(http.HandlerFunc(basketHandler.DecItem), "user", "admin")).Methods("POST")
+
+	r.Handle("/order/{ORDER_ID:[0-9]+}", authManager.Auth(http.HandlerFunc(orderHandler.Get), "admin")).Methods("GET")
+	r.Handle("/order/{ORDER_ID:[0-9]+}", authManager.Auth(http.HandlerFunc(orderHandler.Update), "admin")).Methods("POST")
+	r.Handle("/orders/my", authManager.Auth(http.HandlerFunc(orderHandler.GetAllMy), "user", "admin")).Methods("GET")
+	r.Handle("/orders", authManager.Auth(http.HandlerFunc(orderHandler.GetAll), "admin")).Methods("GET")
+
 	//TODO добавление, удаление, изменение новых пользователей
-	//TODO GET /items
+	//TODO рпз часть реферат
+	//TODO список литературы и ссылки на нее в рпз
 
 	mux := middleware.AccessLog(logger, r)
 	mux = middleware.Panic(logger, mux)

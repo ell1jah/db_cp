@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bcf:controlfile version="3.9" bltxversion="3.18b" xmlns:bcf="https://sourceforge.net/projects/biblatex">
+<bcf:controlfile version="3.10" bltxversion="3.19" xmlns:bcf="https://sourceforge.net/projects/biblatex">
   <!-- BIBER OPTIONS -->
   <bcf:options component="biber" type="global">
     <bcf:option type="singlevalued">
@@ -37,6 +37,11 @@
     <bcf:option type="singlevalued">
       <bcf:key>alphaothers</bcf:key>
       <bcf:value>+</bcf:value>
+    </bcf:option>
+    <bcf:option type="multivalued">
+      <bcf:key>extradatecontext</bcf:key>
+      <bcf:value order="1">labelname</bcf:value>
+      <bcf:value order="2">labeltitle</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labelalpha</bcf:key>
@@ -300,6 +305,11 @@
   </bcf:options>
   <!-- book -->
   <bcf:options component="biblatex" type="book">
+    <bcf:option type="multivalued">
+      <bcf:key>extradatecontext</bcf:key>
+      <bcf:value order="1">labelname</bcf:value>
+      <bcf:value order="2">labeltitle</bcf:value>
+    </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labelalpha</bcf:key>
       <bcf:value>0</bcf:value>
@@ -534,6 +544,11 @@
   </bcf:options>
   <!-- collection -->
   <bcf:options component="biblatex" type="collection">
+    <bcf:option type="multivalued">
+      <bcf:key>extradatecontext</bcf:key>
+      <bcf:value order="1">labelname</bcf:value>
+      <bcf:value order="2">labeltitle</bcf:value>
+    </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labelalpha</bcf:key>
       <bcf:value>0</bcf:value>
@@ -768,6 +783,11 @@
   </bcf:options>
   <!-- reference -->
   <bcf:options component="biblatex" type="reference">
+    <bcf:option type="multivalued">
+      <bcf:key>extradatecontext</bcf:key>
+      <bcf:value order="1">labelname</bcf:value>
+      <bcf:value order="2">labeltitle</bcf:value>
+    </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labelalpha</bcf:key>
       <bcf:value>0</bcf:value>
@@ -1002,6 +1022,11 @@
   </bcf:options>
   <!-- proceedings -->
   <bcf:options component="biblatex" type="proceedings">
+    <bcf:option type="multivalued">
+      <bcf:key>extradatecontext</bcf:key>
+      <bcf:value order="1">labelname</bcf:value>
+      <bcf:value order="2">labeltitle</bcf:value>
+    </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labelalpha</bcf:key>
       <bcf:value>0</bcf:value>
@@ -1245,6 +1270,7 @@
     <bcf:option datatype="xml">sortingnamekeytemplate</bcf:option>
     <bcf:option datatype="xml">sortingtemplate</bcf:option>
     <bcf:option datatype="xml">extradatespec</bcf:option>
+    <bcf:option datatype="xml">extradatecontext</bcf:option>
     <bcf:option datatype="xml">labelnamespec</bcf:option>
     <bcf:option datatype="xml">labeltitlespec</bcf:option>
     <bcf:option datatype="xml">labeldatespec</bcf:option>
@@ -1499,6 +1525,7 @@
     <bcf:option datatype="xml">translit</bcf:option>
     <bcf:option datatype="xml">sortexclusion</bcf:option>
     <bcf:option datatype="xml">sortinclusion</bcf:option>
+    <bcf:option datatype="xml">extradatecontext</bcf:option>
     <bcf:option datatype="xml">labelnamespec</bcf:option>
     <bcf:option datatype="xml">labeltitlespec</bcf:option>
     <bcf:option datatype="xml">labeldatespec</bcf:option>
@@ -1658,6 +1685,11 @@
       <bcf:map>
         <bcf:map_step map_field_source="editor" map_match="(.+\s+and\s+){3,}|and\s+others\s*$" map_final="1"/>
         <bcf:map_step map_field_set="options" map_field_value="useeditor=false"/>
+      </bcf:map>
+      <bcf:map map_overwrite="1" map_foreach="volume,book,part,issue">
+        <bcf:map_step map_field_source="$MAPLOOP" map_final="1"/>
+        <bcf:map_step map_field_set="internalsort$MAPLOOP" map_origfieldval="1"/>
+        <bcf:map_step map_field_source="internalsort$MAPLOOP" map_match="(\d+).*" map_replace="$1"/>
       </bcf:map>
       <bcf:map>
         <bcf:map_step map_type_source="candthesis" map_type_target="thesis" map_final="1"/>
@@ -2296,6 +2328,10 @@
       <bcf:field fieldtype="field" datatype="range">part</bcf:field>
       <bcf:field fieldtype="field" datatype="range">volume</bcf:field>
       <bcf:field fieldtype="field" datatype="range">issue</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">internalsortbook</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">internalsortpart</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">internalsortvolume</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">internalsortissue</bcf:field>
       <bcf:field fieldtype="field" datatype="literal">books</bcf:field>
       <bcf:field fieldtype="field" datatype="literal">parts</bcf:field>
       <bcf:field fieldtype="field" datatype="literal">issues</bcf:field>
@@ -3146,6 +3182,10 @@
       <bcf:field>books</bcf:field>
       <bcf:field>parts</bcf:field>
       <bcf:field>issues</bcf:field>
+      <bcf:field>internalsortbook</bcf:field>
+      <bcf:field>internalsortpart</bcf:field>
+      <bcf:field>internalsortvolume</bcf:field>
+      <bcf:field>internalsortissue</bcf:field>
       <bcf:field>language</bcf:field>
       <bcf:field>media</bcf:field>
       <bcf:field>credits</bcf:field>

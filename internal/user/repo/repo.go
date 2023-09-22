@@ -16,9 +16,7 @@ func (pur *PgUserRepo) Create(user models.User) (int, error) {
 	var id int
 
 	err := pur.DB.QueryRow(
-		"insert into webUser (user_id, user_login, user_password, user_name, user_sex, user_role) "+
-			"values ((select max(user_id) from webUser) + 1, $1, $2, $3, $4, $5) "+
-			"returning user_id",
+		"select NewUser($1, $2, $3, $4, $5)",
 		user.Login,
 		user.Password,
 		user.Name,

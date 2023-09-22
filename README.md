@@ -29,6 +29,4 @@ GET /order/{ORDER_ID}
 POST /order/{ORDER_ID}
 GET /orders/my
 GET /orders
-    status
-    user
-    order
+

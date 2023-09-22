@@ -14,3 +14,6 @@ fillPostgres:
 
 run:
 	go run cmd/main.go 
+
+test:
+	locust -f scripts/locust.py --host=http://localhost:8080
